@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import Character from './Chararcter';
 
-export default class Math extends Character {
+export default class MathGame extends Character {
   get attack() {
     return this.attack;
   }

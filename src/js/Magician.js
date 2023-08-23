@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import Math from './Math';
+import MathGame from './Math';
 
-export default class Magican extends Math {
+export default class Magican extends MathGame {
   constructor(name) {
     super(name);
 
