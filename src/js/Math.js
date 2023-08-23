@@ -1,26 +1,29 @@
+/* eslint-disable default-case */
 /* eslint-disable no-unused-vars */
 import Character from './Chararcter';
 
-class Math extends Character {
+export default class Math extends Character {
   get attack() {
     return this.attack;
   }
 
   set attack(value) {
-    if (value === 5) {
-      this.attack = 60 * (this.attack / 100);
-    }
-    if (value === 4) {
-      this.attack = 70 * (this.attack / 100);
-    }
-    if (value === 3) {
-      this.attack = 80 * (this.attack / 100);
-    }
-    if (value === 2) {
-      this.attack = 90 * (this.attack / 100);
-    }
-    if (value === 1) {
-      this.attack = 100 * (this.attack / 100);
+    switch (value) {
+      case 5:
+        this.attack = 60 * (this.attack / 100);
+        break;
+      case 4:
+        this.attack = 70 * (this.attack / 100);
+        break;
+      case 3:
+        this.attack = 80 * (this.attack / 100);
+        break;
+      case 2:
+        this.attack = 90 * (this.attack / 100);
+        break;
+      case 1:
+        this.attack = 100 * (this.attack / 100);
+        break;
     }
   }
 
