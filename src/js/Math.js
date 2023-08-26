@@ -3,7 +3,7 @@
 import Character from './Chararcter';
 
 export default class MathGame extends Character {
-  hit(value, stoned) {
+  hit(value) {
     switch (value) {
       case 5:
         this.attack = 60 * (this.attack / 100);
@@ -21,11 +21,16 @@ export default class MathGame extends Character {
         this.attack = 100 * (this.attack / 100);
         break;
     }
-    if (stoned === true) {
-      this.attack -= Math.log(value) * 5;
-      if (this.attack < 0) {
-        this.attack = 0;
-      }
+  }
+
+  get stoned() {
+    return this.attack;
+  }
+
+  set stoned(value) {
+    this.attack -= Math.log(value) * 5;
+    if (this.attack < 0) {
+      this.attack = 0;
     }
   }
 }
