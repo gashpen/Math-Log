@@ -27,11 +27,11 @@ export default class MathGame extends Character {
     }
   }
 
-  get stonede() {
+  get stoned() {
     return this.attack;
   }
 
-  set stonede(value) {
+  set stoned(value) {
     switch (value) {
       case 5:
         this.attack = 60 * (this.attack / 100) - Math.log2(5) * 5;
