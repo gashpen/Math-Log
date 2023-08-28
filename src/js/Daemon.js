@@ -9,7 +9,7 @@ export default class Daemon extends MathGame {
     this.type = 'Daemon';
     this.health = 100;
     this.level = 1;
-    this.attack = 10;
+    this.attack = 100;
     this.defence = 40;
   }
 }
